@@ -1,0 +1,232 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-the-ready-to-use-application-named-kds-ai-image-generator-pro-with-a-complete-shell-app-header-sidebar-or-top-nav-listing-all-tools-a-landing-dashboard-page-and-a-consistent-layout-that-works-on-desktop-and-mobile",
+      "featureTitle": "Create the ready-to-use application named \"KDS Ai Image Generator Pro\" with a complete shell: app header, sidebar (or top nav) listing all tools, a landing/dashboard page, and a consistent layout that works on desktop and mobile.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/AppShell.tsx",
+        "frontend/src/components/nav/ToolNav.tsx",
+        "frontend/src/pages/DashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-tools-catalog-that-includes-these-dedicated-tool-pages-logo-maker-mockup-creator-mini-world-generator-barbershop-stylist-outpainting-pov-hand-creator-background-removal-ai-retouch-product-photographer-sketch-pencil-art-wedding-prewedding-editor-id-photo-booth-architectural-design-visualizer-maternity-photo-editor-big-head-caricature-generator-infographic-poster-creator-photo-restoration-fashion-model-generator-banner-design-baby-kids-photo-editor-religious-event-photo-editor-graduation-photo-editor-age-transformation-filter-magic-eraser-collage-maker-and-filter-usia-age-filter",
+      "featureTitle": "Add a \"Tools\" catalog that includes these dedicated tool pages: Logo Maker, Mockup Creator, Mini World Generator, Barbershop Stylist, Outpainting, POV Hand Creator, Background Removal, AI Retouch, Product Photographer, Sketch & Pencil Art, Wedding & Prewedding Editor, ID Photo Booth, Architectural Design Visualizer, Maternity Photo Editor, Big Head Caricature Generator, Infographic Poster Creator, Photo Restoration, Fashion Model Generator, Banner Design, Baby & Kids Photo Editor, Religious Event Photo Editor, Graduation Photo Editor, Age Transformation Filter, Magic Eraser, Collage Maker, and Filter Usia (Age Filter).",
+      "files": [
+        "frontend/src/components/nav/ToolNav.tsx",
+        "frontend/src/lib/tools/toolRegistry.ts",
+        "frontend/src/pages/ToolsCatalogPage.tsx",
+        "frontend/src/pages/tools/AIRetouchPage.tsx",
+        "frontend/src/pages/tools/AgeTransformationFilterPage.tsx",
+        "frontend/src/pages/tools/ArchitecturalDesignVisualizerPage.tsx",
+        "frontend/src/pages/tools/BabyKidsPhotoEditorPage.tsx",
+        "frontend/src/pages/tools/BackgroundRemovalPage.tsx",
+        "frontend/src/pages/tools/BannerDesignPage.tsx",
+        "frontend/src/pages/tools/BarbershopStylistPage.tsx",
+        "frontend/src/pages/tools/BigHeadCaricatureGeneratorPage.tsx",
+        "frontend/src/pages/tools/CollageMakerPage.tsx",
+        "frontend/src/pages/tools/FashionModelGeneratorPage.tsx",
+        "frontend/src/pages/tools/FilterUsiaAgeFilterPage.tsx",
+        "frontend/src/pages/tools/GraduationPhotoEditorPage.tsx",
+        "frontend/src/pages/tools/IDPhotoBoothPage.tsx",
+        "frontend/src/pages/tools/InfographicPosterCreatorPage.tsx",
+        "frontend/src/pages/tools/LogoMakerPage.tsx",
+        "frontend/src/pages/tools/MagicEraserPage.tsx",
+        "frontend/src/pages/tools/MaternityPhotoEditorPage.tsx",
+        "frontend/src/pages/tools/MiniWorldGeneratorPage.tsx",
+        "frontend/src/pages/tools/MockupCreatorPage.tsx",
+        "frontend/src/pages/tools/OutpaintingPage.tsx",
+        "frontend/src/pages/tools/POVHandCreatorPage.tsx",
+        "frontend/src/pages/tools/PhotoRestorationPage.tsx",
+        "frontend/src/pages/tools/ProductPhotographerPage.tsx",
+        "frontend/src/pages/tools/ReligiousEventPhotoEditorPage.tsx",
+        "frontend/src/pages/tools/SketchPencilArtPage.tsx",
+        "frontend/src/pages/tools/WeddingPreweddingEditorPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-for-every-tool-page-implement-dedicated-presets-and-detailed-configuration-options-each-tool-must-provide-a-a-preset-selector-with-at-least-5-presets-unique-to-that-tool-b-an-advanced-settings-section-with-at-least-8-configurable-fields-relevant-to-the-tool-sliders-selects-toggles-text-inputs-and-c-a-reset-to-default-action-per-tool",
+      "featureTitle": "For every tool page, implement dedicated presets and detailed configuration options: each tool must provide (a) a preset selector with at least 5 presets unique to that tool, (b) an \"Advanced settings\" section with at least 8 configurable fields relevant to the tool (sliders, selects, toggles, text inputs), and (c) a reset-to-default action per tool.",
+      "files": [
+        "frontend/src/components/tools/ToolConfigPanel.tsx",
+        "frontend/src/components/tools/ToolStudio.tsx",
+        "frontend/src/lib/tools/toolConfigs.ts",
+        "frontend/src/pages/tools/BackgroundRemovalPage.tsx",
+        "frontend/src/pages/tools/LogoMakerPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-unified-workspace-experience-for-all-tools-input-area-upload-image-s-or-choose-blank-canvas-where-relevant-live-preview-area-and-an-output-area-with-download-export-controls-the-ui-must-clearly-indicate-required-vs-optional-inputs-per-tool",
+      "featureTitle": "Implement a unified \"Workspace\" experience for all tools: input area (upload image(s) or choose blank canvas where relevant), live preview area, and an output area with download/export controls. The UI must clearly indicate required vs optional inputs per tool.",
+      "files": [
+        "frontend/src/components/tools/ToolStudio.tsx",
+        "frontend/src/components/workspace/WorkspaceInputPanel.tsx",
+        "frontend/src/components/workspace/WorkspaceLayout.tsx",
+        "frontend/src/components/workspace/WorkspaceOutputPanel.tsx",
+        "frontend/src/components/workspace/WorkspacePreviewPanel.tsx",
+        "frontend/src/lib/tools/toolRegistry.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-provide-functional-offline-capable-processing-behavior-for-each-tool-using-client-side-image-operations-canvas-web-apis-so-the-app-is-usable-without-relying-on-external-ai-services-where-a-requested-tool-implies-ai-e-g-background-removal-outpainting-hand-creation-implement-a-best-effort-non-ai-approximation-filters-masks-inpainting-like-blur-clone-crop-extend-canvas-compositing-stylization-and-clearly-label-results-as-local-processing-preview-in-the-ui",
+      "featureTitle": "Provide functional, offline-capable processing behavior for each tool using client-side image operations (Canvas/Web APIs) so the app is usable without relying on external AI services. Where a requested tool implies AI (e.g., background removal/outpainting/hand creation), implement a best-effort non-AI approximation (filters, masks, inpainting-like blur/clone, crop/extend canvas, compositing, stylization) and clearly label results as \"Local processing preview\" in the UI.",
+      "files": [
+        "frontend/src/components/tools/ToolStudio.tsx",
+        "frontend/src/components/workspace/WorkspaceOutputPanel.tsx",
+        "frontend/src/lib/image/canvasUtils.ts",
+        "frontend/src/lib/image/localToolProcessors.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-backend-persistence-for-user-projects-and-tool-runs-authenticated-users-can-save-a-tool-type-b-selected-preset-c-configuration-values-d-timestamps-and-e-references-metadata-for-input-output-assets-include-list-view-details-rename-and-delete-actions",
+      "featureTitle": "Add backend persistence for user projects and tool runs: authenticated users can save (a) tool type, (b) selected preset, (c) configuration values, (d) timestamps, and (e) references/metadata for input/output assets. Include list, view details, rename, and delete actions.",
+      "files": [
+        "frontend/src/components/auth/AuthGate.tsx",
+        "frontend/src/components/auth/LoginButton.tsx",
+        "frontend/src/components/auth/ProfileSetupModal.tsx",
+        "frontend/src/components/layout/AppShell.tsx",
+        "frontend/src/components/tools/ToolStudio.tsx",
+        "frontend/src/pages/MyProjectsPage.tsx",
+        "frontend/src/pages/ProjectDetailsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-english-only-onboarding-help-layer-for-each-tool-page-include-a-concise-how-it-works-section-that-describes-inputs-what-presets-do-and-what-the-advanced-settings-control-no-claims-about-external-ai",
+      "featureTitle": "Add an English-only onboarding/help layer: for each tool page include a concise \"How it works\" section that describes inputs, what presets do, and what the advanced settings control (no claims about external AI).",
+      "files": [
+        "frontend/src/components/tools/HowItWorks.tsx",
+        "frontend/src/components/tools/ToolStudio.tsx",
+        "frontend/src/lib/tools/toolHelpText.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-consistent-visual-theme-colors-typography-spacing-and-component-styling-across-the-whole-app-with-a-distinctive-dark-studio-look-charcoal-graphite-base-warm-accent-color-like-amber-or-coral-high-contrast-panels-subtle-grain-texture-apply-it-consistently-to-navigation-tool-panels-forms-and-preview-canvas-areas-do-not-use-a-blue-purple-primary-theme",
+      "featureTitle": "Implement a consistent visual theme (colors, typography, spacing, and component styling) across the whole app with a distinctive \"dark studio\" look (charcoal/graphite base, warm accent color like amber or coral, high-contrast panels, subtle grain texture). Apply it consistently to navigation, tool panels, forms, and preview canvas areas. Do not use a blue/purple primary theme.",
+      "files": [
+        "frontend/src/components/layout/AppShell.tsx",
+        "frontend/src/components/workspace/WorkspaceLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-include-static-brand-assets-for-the-app-and-render-them-in-the-ui-app-logo-and-a-dashboard-hero-banner-background-stored-under-frontend-public-assets-generated-and-referenced-directly-by-the-frontend-not-served-generated-by-the-backend",
+      "featureTitle": "Generate and include static brand assets for the app and render them in the UI: app logo and a dashboard hero/banner background stored under frontend/public/assets/generated and referenced directly by the frontend (not served/generated by the backend).",
+      "files": [
+        "frontend/src/components/layout/AppShell.tsx",
+        "frontend/src/pages/DashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

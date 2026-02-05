@@ -1,0 +1,273 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 4,
+  "summary": "Build a ready-to-use app named \"KDS Ai Image Generator Pro\" that provides a suite of AI image creation/editing tools, each with dedicated presets and detailed configuration options.",
+  "existing_features": [
+    {
+      "id": "feature-create-the-ready-to-use-application-named-kds-ai-image-generator-pro-with-a-complete-shell-app-header-sidebar-or-top-nav-listing-all-tools-a-landing-dashboard-page-and-a-consistent-layout-that-works-on-desktop-and-mobile",
+      "title": "Create the ready-to-use application named \"KDS Ai Image Generator Pro\" with a complete shell: app header, sidebar (or top nav) listing all tools, a landing/dashboard page, and a consistent layout that works on desktop and mobile.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-tools-catalog-that-includes-these-dedicated-tool-pages-logo-maker-mockup-creator-mini-world-generator-barbershop-stylist-outpainting-pov-hand-creator-background-removal-ai-retouch-product-photographer-sketch-pencil-art-wedding-prewedding-editor-id-photo-booth-architectural-design-visualizer-maternity-photo-editor-big-head-caricature-generator-infographic-poster-creator-photo-restoration-fashion-model-generator-banner-design-baby-kids-photo-editor-religious-event-photo-editor-graduation-photo-editor-age-transformation-filter-magic-eraser-collage-maker-and-filter-usia-age-filter",
+      "title": "Add a \"Tools\" catalog that includes these dedicated tool pages: Logo Maker, Mockup Creator, Mini World Generator, Barbershop Stylist, Outpainting, POV Hand Creator, Background Removal, AI Retouch, Product Photographer, Sketch & Pencil Art, Wedding & Prewedding Editor, ID Photo Booth, Architectural Design Visualizer, Maternity Photo Editor, Big Head Caricature Generator, Infographic Poster Creator, Photo Restoration, Fashion Model Generator, Banner Design, Baby & Kids Photo Editor, Religious Event Photo Editor, Graduation Photo Editor, Age Transformation Filter, Magic Eraser, Collage Maker, and Filter Usia (Age Filter).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-for-every-tool-page-implement-dedicated-presets-and-detailed-configuration-options-each-tool-must-provide-a-a-preset-selector-with-at-least-5-presets-unique-to-that-tool-b-an-advanced-settings-section-with-at-least-8-configurable-fields-relevant-to-the-tool-sliders-selects-toggles-text-inputs-and-c-a-reset-to-default-action-per-tool",
+      "title": "For every tool page, implement dedicated presets and detailed configuration options: each tool must provide (a) a preset selector with at least 5 presets unique to that tool, (b) an \"Advanced settings\" section with at least 8 configurable fields relevant to the tool (sliders, selects, toggles, text inputs), and (c) a reset-to-default action per tool.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-unified-workspace-experience-for-all-tools-input-area-upload-image-s-or-choose-blank-canvas-where-relevant-live-preview-area-and-an-output-area-with-download-export-controls-the-ui-must-clearly-indicate-required-vs-optional-inputs-per-tool",
+      "title": "Implement a unified \"Workspace\" experience for all tools: input area (upload image(s) or choose blank canvas where relevant), live preview area, and an output area with download/export controls. The UI must clearly indicate required vs optional inputs per tool.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-functional-offline-capable-processing-behavior-for-each-tool-using-client-side-image-operations-canvas-web-apis-so-the-app-is-usable-without-relying-on-external-ai-services-where-a-requested-tool-implies-ai-e-g-background-removal-outpainting-hand-creation-implement-a-best-effort-non-ai-approximation-filters-masks-inpainting-like-blur-clone-crop-extend-canvas-compositing-stylization-and-clearly-label-results-as-local-processing-preview-in-the-ui",
+      "title": "Provide functional, offline-capable processing behavior for each tool using client-side image operations (Canvas/Web APIs) so the app is usable without relying on external AI services. Where a requested tool implies AI (e.g., background removal/outpainting/hand creation), implement a best-effort non-AI approximation (filters, masks, inpainting-like blur/clone, crop/extend canvas, compositing, stylization) and clearly label results as \"Local processing preview\" in the UI.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-backend-persistence-for-user-projects-and-tool-runs-authenticated-users-can-save-a-tool-type-b-selected-preset-c-configuration-values-d-timestamps-and-e-references-metadata-for-input-output-assets-include-list-view-details-rename-and-delete-actions",
+      "title": "Add backend persistence for user projects and tool runs: authenticated users can save (a) tool type, (b) selected preset, (c) configuration values, (d) timestamps, and (e) references/metadata for input/output assets. Include list, view details, rename, and delete actions.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-english-only-onboarding-help-layer-for-each-tool-page-include-a-concise-how-it-works-section-that-describes-inputs-what-presets-do-and-what-the-advanced-settings-control-no-claims-about-external-ai",
+      "title": "Add an English-only onboarding/help layer: for each tool page include a concise \"How it works\" section that describes inputs, what presets do, and what the advanced settings control (no claims about external AI).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-consistent-visual-theme-colors-typography-spacing-and-component-styling-across-the-whole-app-with-a-distinctive-dark-studio-look-charcoal-graphite-base-warm-accent-color-like-amber-or-coral-high-contrast-panels-subtle-grain-texture-apply-it-consistently-to-navigation-tool-panels-forms-and-preview-canvas-areas-do-not-use-a-blue-purple-primary-theme",
+      "title": "Implement a consistent visual theme (colors, typography, spacing, and component styling) across the whole app with a distinctive \"dark studio\" look (charcoal/graphite base, warm accent color like amber or coral, high-contrast panels, subtle grain texture). Apply it consistently to navigation, tool panels, forms, and preview canvas areas. Do not use a blue/purple primary theme.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-static-brand-assets-for-the-app-and-render-them-in-the-ui-app-logo-and-a-dashboard-hero-banner-background-stored-under-frontend-public-assets-generated-and-referenced-directly-by-the-frontend-not-served-generated-by-the-backend",
+      "title": "Generate and include static brand assets for the app and render them in the UI: app logo and a dashboard hero/banner background stored under frontend/public/assets/generated and referenced directly by the frontend (not served/generated by the backend).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create ready-to-use application \"KDS Ai Image Generator Pro\" (core app scaffolding, navigation, and overall UX)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add AI tool: Logo Maker (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add AI tool: Mockup Creator (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add AI tool: Mini World Generator (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add AI tool: Barbershop Stylist (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add AI tool: Outpainting (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add AI tool: POV Hand Creator (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add AI tool: Background Removal (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add AI tool: AI Retouch (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add AI tool: Product Photographer (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add AI tool: Sketch & Pencil Art (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add AI tool: Wedding & Prewedding Editor (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add AI tool: ID Photo Booth (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Add AI tool: Architectural Design Visualizer (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add AI tool: Maternity Photo Editor (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Add AI tool: Big Head Caricature Generator (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Add AI tool: Infographic Poster Creator (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Add AI tool: Photo Restoration (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Add AI tool: Fashion Model Generator (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Add AI tool: Banner Design (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Add AI tool: Baby & Kids Photo Editor (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Add AI tool: Religious Event Photo Editor (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Add AI tool: Graduation Photo Editor (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Add AI tool: Age Transformation Filter (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Add AI tool: Magic Eraser (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Add AI tool: Collage Maker (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Add AI tool: Filter Usia / Age Filter (with dedicated presets and detailed configuration options)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architectural_notes": [
+    "Each AI tool must have its own dedicated presets and detailed configuration options."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- App logo mark, modern monogram style, high contrast on dark background (kdsai-logo.dim_512x512.png)\n- Wide dashboard hero background, dark studio texture with warm accent lighting (kdsai-hero-bg.dim_1600x600.png)\n- Tool category icon set, minimal line icons, consistent stroke, warm accent (kdsai-tool-icons.dim_1024x1024.png)",
+  "generatedImages": [
+    {
+      "filename": "kdsai-logo.dim_512x512.png",
+      "description": "App logo mark, modern monogram style, high contrast on dark background",
+      "targetWidth": 512,
+      "targetHeight": 512
+    },
+    {
+      "filename": "kdsai-hero-bg.dim_1600x600.png",
+      "description": "Wide dashboard hero background, dark studio texture with warm accent lighting",
+      "targetWidth": 1600,
+      "targetHeight": 600
+    },
+    {
+      "filename": "kdsai-tool-icons.dim_1024x1024.png",
+      "description": "Tool category icon set, minimal line icons, consistent stroke, warm accent",
+      "targetWidth": 1024,
+      "targetHeight": 1024
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "KDS Ai Image Generator Pro",
+  "clarification_mode": "pro",
+  "clarification_rounds": 0
+}

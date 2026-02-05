@@ -1,2 +1,3 @@
-# kds-ai-image-generator-pro
-Exported from Caffeine project: KDS Ai Image Generator Pro
+## KDS Ai Image Generator Pro
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

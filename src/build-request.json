@@ -1,0 +1,172 @@
+{
+  "kind": "build_request",
+  "title": "KDS Ai Image Generator Pro — Multi-Tool AI Image Studio with Presets and Advanced Config",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create the ready-to-use application named \"KDS Ai Image Generator Pro\" with a complete shell: app header, sidebar (or top nav) listing all tools, a landing/dashboard page, and a consistent layout that works on desktop and mobile.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Buatkan Aplikasi Siap Pakai Dengan Nama \"KDS Ai Image Generator Pro\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "The app name \"KDS Ai Image Generator Pro\" appears in the header and page titles",
+        "There is a dashboard page that links to every requested tool",
+        "Navigation works on mobile (responsive) and desktop"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a \"Tools\" catalog that includes these dedicated tool pages: Logo Maker, Mockup Creator, Mini World Generator, Barbershop Stylist, Outpainting, POV Hand Creator, Background Removal, AI Retouch, Product Photographer, Sketch & Pencil Art, Wedding & Prewedding Editor, ID Photo Booth, Architectural Design Visualizer, Maternity Photo Editor, Big Head Caricature Generator, Infographic Poster Creator, Photo Restoration, Fashion Model Generator, Banner Design, Baby & Kids Photo Editor, Religious Event Photo Editor, Graduation Photo Editor, Age Transformation Filter, Magic Eraser, Collage Maker, and Filter Usia (Age Filter).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Expand the application to include the following AI tools: Logo Maker, Mockup Creator, Mini World Generator, Barbershop Stylist, Outpainting, POV Hand Creator, Background Removal, AI Retouch, Product Photographer, Sketch & Pencil Art, Wedding & Prewedding Editor, ID Photo Booth, Architectural Design Visualizer, Maternity Photo Editor, Big Head Caricature Generator, Infographic Poster Creator, Photo Restoration, Fashion Model Generator, Banner Design, Baby & Kids Photo Editor, Religious Event Photo Editor, Graduation Photo Editor, Age Transformation Filter, Magic Eraser, Collage Maker, and Filter Usia (Age Filter)."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each listed tool has its own route/page and is reachable from navigation",
+        "Each tool page shows the tool name, short description, and a configuration panel",
+        "All user-facing text on these pages is in English"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "For every tool page, implement dedicated presets and detailed configuration options: each tool must provide (a) a preset selector with at least 5 presets unique to that tool, (b) an \"Advanced settings\" section with at least 8 configurable fields relevant to the tool (sliders, selects, toggles, text inputs), and (c) a reset-to-default action per tool.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Ensure each tool has its own dedicated presets and detailed configuration options."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each tool has >= 5 presets that change visible configuration values",
+        "Each tool has >= 8 advanced configuration inputs (types mixed: slider/select/toggle/text)",
+        "Each tool supports \"Reset\" to restore the default preset/config"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a unified \"Workspace\" experience for all tools: input area (upload image(s) or choose blank canvas where relevant), live preview area, and an output area with download/export controls. The UI must clearly indicate required vs optional inputs per tool.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Every tool page has Input, Preview, and Output sections",
+        "Tools that are generation-first (e.g., Logo Maker, Mini World Generator, Infographic Poster Creator, Banner Design) support starting from a blank canvas",
+        "Tools that are edit-first (e.g., Background Removal, Magic Eraser, AI Retouch, Photo Restoration) require an image upload and show a clear validation message in English when missing"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Provide functional, offline-capable processing behavior for each tool using client-side image operations (Canvas/Web APIs) so the app is usable without relying on external AI services. Where a requested tool implies AI (e.g., background removal/outpainting/hand creation), implement a best-effort non-AI approximation (filters, masks, inpainting-like blur/clone, crop/extend canvas, compositing, stylization) and clearly label results as \"Local processing preview\" in the UI.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking the primary action (e.g., \"Generate\" / \"Apply\") produces a visible changed preview/output for each tool using local processing",
+        "The UI includes the label \"Local processing preview\" on tool results that are approximations of AI behavior",
+        "The user can export/download the produced image (PNG) for each tool"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add backend persistence for user projects and tool runs: authenticated users can save (a) tool type, (b) selected preset, (c) configuration values, (d) timestamps, and (e) references/metadata for input/output assets. Include list, view details, rename, and delete actions.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A signed-in user can create and save a project/tool run and see it in a \"My Projects\" list",
+        "A user can open a saved run and the tool page restores preset + configuration values",
+        "A user can rename and delete a saved run"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add an English-only onboarding/help layer: for each tool page include a concise \"How it works\" section that describes inputs, what presets do, and what the advanced settings control (no claims about external AI).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Use English for any user-facing text in the build request."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each tool page contains a \"How it works\" section in English",
+        "The text does not reference external AI providers or third-party model APIs"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement a consistent visual theme (colors, typography, spacing, and component styling) across the whole app with a distinctive \"dark studio\" look (charcoal/graphite base, warm accent color like amber or coral, high-contrast panels, subtle grain texture). Apply it consistently to navigation, tool panels, forms, and preview canvas areas. Do not use a blue/purple primary theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages share a consistent dark-studio theme with a warm accent color (not blue/purple primary)",
+        "Forms, buttons, and panels follow the same style system across tools",
+        "Preview/output areas are visually distinct and readable on dark backgrounds"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Generate and include static brand assets for the app and render them in the UI: app logo and a dashboard hero/banner background stored under frontend/public/assets/generated and referenced directly by the frontend (not served/generated by the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist at frontend/public/assets/generated and are used on the dashboard/header",
+        "The app renders correctly without any backend endpoint for images"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing UI text.",
+    "Respect the single-actor backend architecture (all Motoko logic in backend/main.mo).",
+    "Do not modify any frontend files under frontend/src/components/ui or other immutablePaths; compose them instead.",
+    "Do not integrate external AI/LLM services; tool behavior must be implemented locally in the frontend and/or with on-chain persistence only."
+  ],
+  "nonGoals": [
+    "Real-time collaboration, chat, or WebSocket-based features",
+    "Third-party authentication providers (only Internet Identity if auth is used)",
+    "External databases or non-Motoko backend services",
+    "Claims of true AI generation (e.g., model-based background removal/outpainting) when only local approximations are implemented"
+  ],
+  "imageRequirements": {
+    "required": [
+      "App logo mark, modern monogram style, high contrast on dark background (kdsai-logo.dim_512x512.png)",
+      "Wide dashboard hero background, dark studio texture with warm accent lighting (kdsai-hero-bg.dim_1600x600.png)",
+      "Tool category icon set, minimal line icons, consistent stroke, warm accent (kdsai-tool-icons.dim_1024x1024.png)"
+    ],
+    "edits": []
+  }
+}

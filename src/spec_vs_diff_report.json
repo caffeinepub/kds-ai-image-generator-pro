@@ -1,0 +1,127 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-05T09:01:13.072Z",
+  "summary": "Diff adds a full app shell with routing to many tool pages, a reusable ToolStudio workspace (Input/Preview/Output) with local canvas-based processing and export, Internet Identity-based authentication gating for projects, and backend Motoko persistence for projects (plus user profiles/access control). Some requested UI/asset requirements can’t be confirmed from the provided diff summary due to omitted/truncated files.",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "For every tool page, implement dedicated presets (>=5 unique per tool) and an Advanced settings section (>=8 configurable fields) plus reset-to-default.",
+      "reason": "ToolConfigPanel supports presets and advanced settings generically, but the diff summary does not include the per-tool configuration definitions (presets/settings counts per tool) needed to verify the >=5 presets and >=8 fields for every listed tool.",
+      "evidence": [
+        "frontend/src/components/tools/ToolConfigPanel.tsx",
+        "frontend/src/components/tools/ToolStudio.tsx"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Backend persistence for user projects and tool runs with list, view details, rename, and delete actions; restoring preset + configuration values when opening a saved run.",
+      "reason": "Backend code is truncated before showing full implementations for getProject/update/rename/delete flows, and the frontend pages that would demonstrate restore-on-open (MyProjectsPage/ProjectDetailsPage/tool page restore) are omitted from the diff summary, so the required end-to-end behaviors cannot be verified from the provided evidence.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "id": "REQ-1",
+      "requirement": "Dashboard page that links to every requested tool.",
+      "reason": "Routes are defined, but the dashboard implementation is not shown (omitted/truncated), so it cannot be verified that the dashboard contains links to every tool.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Generate and include static brand assets (logo, dashboard hero/background, tool category icon set) under frontend/public/assets/generated and render them in the UI.",
+      "reason": "Only the logo path is referenced in AppShell; the diff summary does not show the actual asset files under frontend/public/assets/generated, nor any usage of the required hero background or the required tool icon set image.",
+      "evidence": [
+        "frontend/src/components/layout/AppShell.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "User profile management and a forced profile setup modal (name entry) after authentication.",
+      "reason": "BuildRequest focuses on tool studio + project persistence; it does not request user profile creation/management UX.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/components/auth/ProfileSetupModal.tsx",
+        "frontend/src/components/layout/AppShell.tsx",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Access control initialization via a secret URL parameter (caffeineAdminToken) and authorization mixin integration.",
+      "reason": "BuildRequest does not mention admin-token URL parameters or an access-control initialization scheme beyond using Internet Identity if auth is used.",
+      "evidence": [
+        "frontend/src/hooks/useActor.ts",
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/auth/AuthGate.tsx",
+    "frontend/src/components/auth/LoginButton.tsx",
+    "frontend/src/components/auth/ProfileSetupModal.tsx",
+    "frontend/src/components/layout/AppShell.tsx",
+    "frontend/src/components/nav/ToolNav.tsx",
+    "frontend/src/components/tools/HowItWorks.tsx",
+    "frontend/src/components/tools/ToolConfigPanel.tsx",
+    "frontend/src/components/tools/ToolStudio.tsx",
+    "frontend/src/components/workspace/WorkspaceInputPanel.tsx",
+    "frontend/src/components/workspace/WorkspaceLayout.tsx",
+    "frontend/src/components/workspace/WorkspaceOutputPanel.tsx",
+    "frontend/src/components/workspace/WorkspacePreviewPanel.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/image/canvasUtils.ts",
+    "frontend/src/lib/image/localToolProcessors.ts",
+    "frontend/src/lib/tools/toolConfigs.ts",
+    "frontend/src/lib/tools/toolHelpText.ts",
+    "frontend/src/lib/tools/toolRegistry.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/DashboardPage.tsx",
+    "frontend/src/pages/MyProjectsPage.tsx",
+    "frontend/src/pages/ProjectDetailsPage.tsx",
+    "frontend/src/pages/ToolsCatalogPage.tsx",
+    "frontend/src/pages/tools/AIRetouchPage.tsx",
+    "frontend/src/pages/tools/AgeTransformationFilterPage.tsx",
+    "frontend/src/pages/tools/ArchitecturalDesignVisualizerPage.tsx",
+    "frontend/src/pages/tools/BabyKidsPhotoEditorPage.tsx",
+    "frontend/src/pages/tools/BackgroundRemovalPage.tsx",
+    "frontend/src/pages/tools/BannerDesignPage.tsx",
+    "frontend/src/pages/tools/BarbershopStylistPage.tsx",
+    "frontend/src/pages/tools/BigHeadCaricatureGeneratorPage.tsx",
+    "frontend/src/pages/tools/CollageMakerPage.tsx",
+    "frontend/src/pages/tools/FashionModelGeneratorPage.tsx",
+    "frontend/src/pages/tools/FilterUsiaAgeFilterPage.tsx",
+    "frontend/src/pages/tools/GraduationPhotoEditorPage.tsx",
+    "frontend/src/pages/tools/IDPhotoBoothPage.tsx",
+    "frontend/src/pages/tools/InfographicPosterCreatorPage.tsx",
+    "frontend/src/pages/tools/LogoMakerPage.tsx",
+    "frontend/src/pages/tools/MagicEraserPage.tsx",
+    "frontend/src/pages/tools/MaternityPhotoEditorPage.tsx",
+    "frontend/src/pages/tools/MiniWorldGeneratorPage.tsx",
+    "frontend/src/pages/tools/MockupCreatorPage.tsx",
+    "frontend/src/pages/tools/OutpaintingPage.tsx",
+    "frontend/src/pages/tools/POVHandCreatorPage.tsx",
+    "frontend/src/pages/tools/PhotoRestorationPage.tsx",
+    "frontend/src/pages/tools/ProductPhotographerPage.tsx",
+    "frontend/src/pages/tools/ReligiousEventPhotoEditorPage.tsx",
+    "frontend/src/pages/tools/SketchPencilArtPage.tsx",
+    "frontend/src/pages/tools/WeddingPreweddingEditorPage.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

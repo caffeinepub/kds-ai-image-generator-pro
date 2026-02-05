@@ -1,0 +1,479 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "KDS Ai Image Generator Pro — Frontend Implementation Plan",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement the app shell with responsive header + sidebar/top nav, dashboard landing page, and consistent layout across desktop and mobile.",
+      "acceptanceCriteria": [
+        "The app name \"KDS Ai Image Generator Pro\" appears in the header and page titles",
+        "There is a dashboard page that links to every requested tool",
+        "Navigation works on mobile (responsive) and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app root composition: global layout shell, router mount, and document title handling for \"KDS Ai Image Generator Pro\"."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure base HTML title and metadata align with the app name and the app renders as a complete shell."
+        },
+        {
+          "path": "frontend/src/router.tsx",
+          "operation": "create",
+          "description": "Add client-side routing for dashboard, tools catalog, and all tool routes; ensure routes are wired into App."
+        },
+        {
+          "path": "frontend/src/components/layout/AppShell.tsx",
+          "operation": "create",
+          "description": "Create a responsive app shell (header + sidebar/top nav + content area) used by all pages."
+        },
+        {
+          "path": "frontend/src/components/nav/ToolNav.tsx",
+          "operation": "create",
+          "description": "Create the navigation UI listing all tools and key sections (Dashboard, Tools, My Projects), optimized for mobile (collapsible) and desktop."
+        },
+        {
+          "path": "frontend/src/pages/DashboardPage.tsx",
+          "operation": "create",
+          "description": "Create the dashboard/landing page that links to every requested tool and surfaces recent project shortcuts when authenticated."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a Tools catalog and dedicated routes/pages for each listed tool with English UI copy, descriptions, and configuration panels.",
+      "acceptanceCriteria": [
+        "Each listed tool has its own route/page and is reachable from navigation",
+        "Each tool page shows the tool name, short description, and a configuration panel",
+        "All user-facing text on these pages is in English"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ToolsCatalogPage.tsx",
+          "operation": "create",
+          "description": "Create a Tools catalog page listing all tool cards, each linking to its dedicated tool route with English-only names/descriptions."
+        },
+        {
+          "path": "frontend/src/lib/tools/toolRegistry.ts",
+          "operation": "create",
+          "description": "Define the canonical tool registry (names, route paths, short descriptions, and tool type identifiers) used by navigation, dashboard, and catalog."
+        },
+        {
+          "path": "frontend/src/pages/tools/LogoMakerPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Logo Maker\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/MockupCreatorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Mockup Creator\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/MiniWorldGeneratorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Mini World Generator\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/BarbershopStylistPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Barbershop Stylist\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/OutpaintingPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Outpainting\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/POVHandCreatorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"POV Hand Creator\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/BackgroundRemovalPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Background Removal\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/AIRetouchPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"AI Retouch\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/ProductPhotographerPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Product Photographer\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/SketchPencilArtPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Sketch & Pencil Art\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/WeddingPreweddingEditorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Wedding & Prewedding Editor\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/IDPhotoBoothPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"ID Photo Booth\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/ArchitecturalDesignVisualizerPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Architectural Design Visualizer\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/MaternityPhotoEditorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Maternity Photo Editor\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/BigHeadCaricatureGeneratorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Big Head Caricature Generator\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/InfographicPosterCreatorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Infographic Poster Creator\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/PhotoRestorationPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Photo Restoration\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/FashionModelGeneratorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Fashion Model Generator\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/BannerDesignPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Banner Design\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/BabyKidsPhotoEditorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Baby & Kids Photo Editor\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/ReligiousEventPhotoEditorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Religious Event Photo Editor\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/GraduationPhotoEditorPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Graduation Photo Editor\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/AgeTransformationFilterPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Age Transformation Filter\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/MagicEraserPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Magic Eraser\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/CollageMakerPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Collage Maker\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/pages/tools/FilterUsiaAgeFilterPage.tsx",
+          "operation": "create",
+          "description": "Create the dedicated tool page wrapper for \"Filter Usia (Age Filter)\" using the shared tool studio."
+        },
+        {
+          "path": "frontend/src/router.tsx",
+          "operation": "modify",
+          "description": "Wire the Tools catalog route and every dedicated tool route into the router so each is reachable from navigation."
+        },
+        {
+          "path": "frontend/src/components/nav/ToolNav.tsx",
+          "operation": "modify",
+          "description": "Populate navigation from the tool registry and ensure every tool page is reachable from the app shell."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add per-tool presets (>=5) and advanced settings (>=8 mixed inputs) with reset-to-default behavior.",
+      "acceptanceCriteria": [
+        "Each tool has >= 5 presets that change visible configuration values",
+        "Each tool has >= 8 advanced configuration inputs (types mixed: slider/select/toggle/text)",
+        "Each tool supports \"Reset\" to restore the default preset/config"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/tools/toolConfigs.ts",
+          "operation": "create",
+          "description": "Define per-tool presets (>=5 each) and advanced settings schemas (>=8 mixed input types each), along with default/reset behavior."
+        },
+        {
+          "path": "frontend/src/components/tools/ToolConfigPanel.tsx",
+          "operation": "create",
+          "description": "Implement the configuration UI: preset selector, advanced settings form controls (sliders/selects/toggles/text inputs), and per-tool reset-to-default."
+        },
+        {
+          "path": "frontend/src/components/tools/ToolStudio.tsx",
+          "operation": "create",
+          "description": "Integrate ToolConfigPanel into the unified tool experience so preset changes visibly update the current configuration state."
+        },
+        {
+          "path": "frontend/src/pages/tools/LogoMakerPage.tsx",
+          "operation": "modify",
+          "description": "Wire the Logo Maker page to the tool config definition so presets and advanced fields are unique to this tool."
+        },
+        {
+          "path": "frontend/src/pages/tools/BackgroundRemovalPage.tsx",
+          "operation": "modify",
+          "description": "Wire the Background Removal page to the tool config definition so presets and advanced fields are unique to this tool."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement a unified Workspace on every tool page with Input/Preview/Output sections, required vs optional input validation, and blank canvas support for generation-first tools.",
+      "acceptanceCriteria": [
+        "Every tool page has Input, Preview, and Output sections",
+        "Tools that are generation-first (e.g., Logo Maker, Mini World Generator, Infographic Poster Creator, Banner Design) support starting from a blank canvas",
+        "Tools that are edit-first (e.g., Background Removal, Magic Eraser, AI Retouch, Photo Restoration) require an image upload and show a clear validation message in English when missing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/workspace/WorkspaceLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout that renders clearly labeled Input, Preview, and Output panels with consistent styling and responsive behavior."
+        },
+        {
+          "path": "frontend/src/components/workspace/WorkspaceInputPanel.tsx",
+          "operation": "create",
+          "description": "Implement tool-aware inputs: image upload (single/multiple as needed) and a blank-canvas starter option for generation-first tools; clearly indicate required vs optional inputs."
+        },
+        {
+          "path": "frontend/src/components/workspace/WorkspacePreviewPanel.tsx",
+          "operation": "create",
+          "description": "Render a live preview canvas/image that updates when the user applies a tool run."
+        },
+        {
+          "path": "frontend/src/components/workspace/WorkspaceOutputPanel.tsx",
+          "operation": "create",
+          "description": "Provide output presentation and export/download controls, including disabled states and validation messaging in English."
+        },
+        {
+          "path": "frontend/src/components/tools/ToolStudio.tsx",
+          "operation": "modify",
+          "description": "Compose WorkspaceLayout + input/preview/output panels for every tool page and enforce per-tool validation rules (required uploads vs optional)."
+        },
+        {
+          "path": "frontend/src/lib/tools/toolRegistry.ts",
+          "operation": "modify",
+          "description": "Annotate each tool with input mode metadata (generation-first supports blank canvas vs edit-first requires upload) to drive Workspace validation and UI indicators."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement offline-capable local image processing for each tool using Canvas/Web APIs with visible preview changes, \"Local processing preview\" labeling, and PNG export.",
+      "acceptanceCriteria": [
+        "Clicking the primary action (e.g., \"Generate\" / \"Apply\") produces a visible changed preview/output for each tool using local processing",
+        "The UI includes the label \"Local processing preview\" on tool results that are approximations of AI behavior",
+        "The user can export/download the produced image (PNG) for each tool"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/image/canvasUtils.ts",
+          "operation": "create",
+          "description": "Add Canvas/Web API helpers for loading images, drawing to canvas, applying basic filters/compositing, and exporting PNG blobs locally."
+        },
+        {
+          "path": "frontend/src/lib/image/localToolProcessors.ts",
+          "operation": "create",
+          "description": "Implement per-tool best-effort local approximations (e.g., stylization, masking-like transparency, blur/clone-like effects, crop/extend canvas, compositing, poster/infographic layouts) to produce a changed output for each tool without external services."
+        },
+        {
+          "path": "frontend/src/components/tools/ToolRunControls.tsx",
+          "operation": "create",
+          "description": "Add the primary action button (Generate/Apply) and show clear status plus the required label \"Local processing preview\" for approximation results."
+        },
+        {
+          "path": "frontend/src/components/workspace/WorkspaceOutputPanel.tsx",
+          "operation": "modify",
+          "description": "Implement PNG export/download for produced output images and ensure the download control is available for every tool after a run."
+        },
+        {
+          "path": "frontend/src/components/tools/ToolStudio.tsx",
+          "operation": "modify",
+          "description": "Connect tool configuration + inputs to localToolProcessors so each tool run updates preview/output using local processing only."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add authenticated \"My Projects\" UI to save/list/view/rename/delete tool runs and restore saved preset + configuration into tool pages.",
+      "acceptanceCriteria": [
+        "A signed-in user can create and save a project/tool run and see it in a \"My Projects\" list",
+        "A user can open a saved run and the tool page restores preset + configuration values",
+        "A user can rename and delete a saved run"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useProjects.ts",
+          "operation": "create",
+          "description": "Create React Query hooks for list/view/save/update/delete project runs using the existing backend interface; require authentication in the UI flow. Use the selected \"authorization\" component patterns for authenticated data access. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/hooks/useUserProfile.ts",
+          "operation": "create",
+          "description": "Create hooks for getCallerUserProfile/saveCallerUserProfile and role checks, following the selected \"authorization\" component guidance to avoid profile setup modal flash. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/auth/LoginButton.tsx",
+          "operation": "create",
+          "description": "Add a login/logout control using Internet Identity and clear cached queries on logout per the selected \"authorization\" component guidance. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/auth/ProfileSetupModal.tsx",
+          "operation": "create",
+          "description": "Prompt first-time authenticated users for a display name and save it via saveCallerUserProfile; do not display principal ids. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/auth/AuthGate.tsx",
+          "operation": "create",
+          "description": "Implement an auth guard to require login before showing personal project data; show an access denied screen for guests per the selected \"authorization\" component UI guidance. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/MyProjectsPage.tsx",
+          "operation": "create",
+          "description": "Create a \"My Projects\" page with authenticated list UI and actions to open, rename, and delete saved runs."
+        },
+        {
+          "path": "frontend/src/pages/ProjectDetailsPage.tsx",
+          "operation": "create",
+          "description": "Create a project details view for a saved run with metadata and quick actions (open in tool, rename, delete)."
+        },
+        {
+          "path": "frontend/src/components/tools/SaveProjectButton.tsx",
+          "operation": "create",
+          "description": "Add a Save action that persists tool type, selected preset, configuration JSON, timestamps (backend-managed), and input/output asset metadata placeholders consistent with offline/local assets."
+        },
+        {
+          "path": "frontend/src/components/tools/ToolStudio.tsx",
+          "operation": "modify",
+          "description": "Wire save/load behavior: allow saving the current run when authenticated; support restoring a saved preset + configuration values when navigating from My Projects into a tool page."
+        },
+        {
+          "path": "frontend/src/router.tsx",
+          "operation": "modify",
+          "description": "Add routes for \"My Projects\" list and project details; protect them with AuthGate and ensure navigation links exist."
+        },
+        {
+          "path": "frontend/src/components/layout/AppShell.tsx",
+          "operation": "modify",
+          "description": "Add LoginButton and user display name (from profile) in the header; ensure logout clears cached application data as required by the selected \"authorization\" component guidance. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add an English-only \"How it works\" help section on each tool page describing inputs, presets, and advanced settings without external AI claims.",
+      "acceptanceCriteria": [
+        "Each tool page contains a \"How it works\" section in English",
+        "The text does not reference external AI providers or third-party model APIs"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/tools/HowItWorks.tsx",
+          "operation": "create",
+          "description": "Create a reusable \"How it works\" section component that renders tool-specific English help text covering inputs, presets, and advanced settings."
+        },
+        {
+          "path": "frontend/src/lib/tools/toolHelpText.ts",
+          "operation": "create",
+          "description": "Provide concise English-only help text per tool, explicitly describing local processing behavior without referencing external AI providers."
+        },
+        {
+          "path": "frontend/src/components/tools/ToolStudio.tsx",
+          "operation": "modify",
+          "description": "Include the \"How it works\" section on every tool page using tool-specific help copy."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Apply a consistent \"dark studio\" theme (charcoal/graphite base, warm accent like amber/coral, high-contrast panels, subtle grain) across the app without blue/purple primary.",
+      "acceptanceCriteria": [
+        "All pages share a consistent dark-studio theme with a warm accent color (not blue/purple primary)",
+        "Forms, buttons, and panels follow the same style system across tools",
+        "Preview/output areas are visually distinct and readable on dark backgrounds"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styles and CSS variables used by Tailwind/shadcn tokens to implement a dark-studio theme with warm (amber/coral) primary accents and subtle grain texture."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Align Tailwind theme token usage to the dark-studio look (warm accent, high-contrast panels) while keeping consistent component styling across pages."
+        },
+        {
+          "path": "frontend/src/components/layout/AppShell.tsx",
+          "operation": "modify",
+          "description": "Apply consistent layout styling (dark panels, warm accent highlights) to header/nav/content regions and ensure mobile/desktop readability."
+        },
+        {
+          "path": "frontend/src/components/workspace/WorkspaceLayout.tsx",
+          "operation": "modify",
+          "description": "Ensure Input/Preview/Output panels are visually distinct, high-contrast, and readable on dark backgrounds."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Include generated static brand assets under frontend/public/assets/generated and render them in the header/dashboard UI without backend image serving.",
+      "acceptanceCriteria": [
+        "Generated images exist at frontend/public/assets/generated and are used on the dashboard/header",
+        "The app renders correctly without any backend endpoint for images"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/kdsai-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated app logo asset at frontend/public/assets/generated/kdsai-logo.dim_512x512.png for direct frontend use."
+        },
+        {
+          "path": "frontend/public/assets/generated/kdsai-hero-bg.dim_1600x600.png",
+          "operation": "create",
+          "description": "Add the generated dashboard hero background asset at frontend/public/assets/generated/kdsai-hero-bg.dim_1600x600.png for direct frontend use."
+        },
+        {
+          "path": "frontend/public/assets/generated/kdsai-tool-icons.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the generated tool icon set asset at frontend/public/assets/generated/kdsai-tool-icons.dim_1024x1024.png for direct frontend use."
+        },
+        {
+          "path": "frontend/src/components/layout/AppShell.tsx",
+          "operation": "modify",
+          "description": "Render the app logo image from frontend/public/assets/generated/kdsai-logo.dim_512x512.png in the header branding area."
+        },
+        {
+          "path": "frontend/src/pages/DashboardPage.tsx",
+          "operation": "modify",
+          "description": "Render the dashboard hero background from frontend/public/assets/generated/kdsai-hero-bg.dim_1600x600.png and optionally reference frontend/public/assets/generated/kdsai-tool-icons.dim_1024x1024.png for tool visuals."
+        }
+      ]
+    }
+  ]
+}
